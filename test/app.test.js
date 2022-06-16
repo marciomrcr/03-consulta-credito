@@ -27,7 +27,7 @@ describe('Testes de Integração', () => {
     nome: clienteJoao.Nome,
     CPF: clienteJoao.CPF,
     valor: 101.75,
-    parcelas: 3
+    parcelas: -3
   }
 
   test('responder na raiz', () => {
