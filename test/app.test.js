@@ -3,16 +3,16 @@ const app = require('../src/app.js')
 const db = require('../src/db')
 
 describe('Testes de Integração', () => {
-  beforeEach(async () => {
-    await db.cliente.destroy({ where: {} })
-    await db.consulta.destroy({ where: {} })
-  })
+  // beforeEach(async () => {
+  //   await db.cliente.destroy({ where: {} })
+  //   await db.consulta.destroy({ where: {} })
+  // })
 
   afterAll(async () => await db.sequelize.close())
 
   const clienteJoao = {
-    Nome: 'João Silva',
-    CPF: '000.000.000-00'
+    Nome: 'Jesus Cristo',
+    CPF: '777.777.777-77'
   }
 
   const resultadoEsperado = {
@@ -27,7 +27,7 @@ describe('Testes de Integração', () => {
     nome: clienteJoao.Nome,
     CPF: clienteJoao.CPF,
     valor: 101.75,
-    parcelas: -3
+    parcelas: 3
   }
 
   test('responder na raiz', () => {
